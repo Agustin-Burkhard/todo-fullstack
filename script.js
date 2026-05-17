@@ -31,7 +31,7 @@ botonRegister.addEventListener("click", function () {
 
     cargando(true);
 
-    fetch("http://localhost:3000/register", {
+    fetch("https://todo-fullstack-k6pu.onrender.com/register", {
         method: "POST",
 
         headers: {
@@ -69,7 +69,7 @@ botonLogin.addEventListener("click", function () {
 
     cargando(true);
 
-    fetch("http://localhost:3000/login", {
+    fetch("https://todo-fullstack-k6pu.onrender.com/login", {
         method: "POST",
 
         headers: {
@@ -161,7 +161,7 @@ function crearTarea(tarea) {
 
         const token = localStorage.getItem("token");
 
-        fetch(`http://localhost:3000/tasks/${tarea._id}`, {
+        fetch(`https://todo-fullstack-k6pu.onrender.com/tasks/${tarea._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -196,7 +196,7 @@ function crearTarea(tarea) {
 
     checkbox.addEventListener("change", function () {
         const token = localStorage.getItem("token");
-        fetch(`http://localhost:3000/tasks/${tarea._id}`, {
+        fetch(`https://todo-fullstack-k6pu.onrender.com/tasks/${tarea._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -219,7 +219,7 @@ function crearTarea(tarea) {
 
     botonBorrar.addEventListener("click", function () {
         const token = localStorage.getItem("token");
-        fetch(`http://localhost:3000/tasks/${tarea._id}`, {
+        fetch(`https://todo-fullstack-k6pu.onrender.com/tasks/${tarea._id}`, {
         method: "DELETE",
         headers: {
         Authorization: `Bearer ${token}`
@@ -336,7 +336,7 @@ function obtenerTareas() {
         return;
     }
 
-    fetch("http://localhost:3000/tasks", {
+    fetch("https://todo-fullstack-k6pu.onrender.com/tasks", {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -396,7 +396,7 @@ boton.addEventListener("click", function () {
 
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:3000/tasks", {
+    fetch("https://todo-fullstack-k6pu.onrender.com/tasks", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -418,7 +418,7 @@ boton.addEventListener("click", function () {
 marcarTodas.addEventListener("click", function () {
     tareas.forEach(function (tarea) {
         const token = localStorage.getItem("token");
-        fetch(`http://localhost:3000/tasks/${tarea._id}`, {
+        fetch(`https://todo-fullstack-k6pu.onrender.com/tasks/${tarea._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
