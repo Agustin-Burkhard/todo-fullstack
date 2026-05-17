@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="to-do-list.css">
+    <link rel="icon" type="image/png" href="./Imagenes/favicon.png.png">
+</head>
+<body>
+
+    <main class="todo">
+        <div class="header-todo">
+            <div class="titulo">
+                <img src="./Imagenes/favicon.png.png" alt="logo" class="logo">
+                    <h1>Mis tareas</h1>
+            </div>
+        </div>
+
+        <div class="auth">
+            
+            <p class="mensaje"></p>
+            <p class="usuario-logueado"></p>
+
+            <input type="text" class="input-user" placeholder="Usuario">
+
+            <input type="password" class="input-password" placeholder="Password">
+
+            <button class="login">Login</button>
+            <button class="logout">Cerrar sesión</button>
+            <button class="register">Registrarse</button>
+
+        </div>
+        
+
+        <div class="acciones">
+
+            <input type="text" class="input-tarea" placeholder="Escribí una tarea">
+
+            <button type="button" class="agregar">Agregar</button>
+
+            <button type="button" id="marcarTodas">Marcar todas</button>
+
+        </div>
+
+        <div class="filtros">
+            <button class="filtro-todas">Todas</button>
+            <button class="filtro-pendientes">Pendientes</button>
+            <button class="filtro-completadas">Completadas</button>
+        </div>
+
+        <ul class="lista"></ul>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
