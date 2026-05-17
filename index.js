@@ -31,9 +31,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.options("*", (req, res) => {
-  res.sendStatus(200);
-});
+
 
 function verificarToken(req, res, next) {
   const authHeader = req.headers.authorization;
